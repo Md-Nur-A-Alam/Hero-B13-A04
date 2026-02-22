@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./jobs.png" type="image/x-icon">
+
+    <!-- daisyUI CDN and Theme -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <!-- Google font Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="mb-4 border-b-2 pb-8 border-gray-200 mt-20 w-9/12 mx-auto">
+        <h1 class="font-bold text-3xl text-neutral mb-3">Job Application Tracker</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div class="p-2 w-full text-neutral rounded-md shadow-md bg-gray-100 hover:bg-gray-300">
+                <h3>Total</h3>
+                <p class="available-job-count font-bold text-2xl my-1">8</p>
+            </div>
+            <div class="p-2 w-full text-neutral rounded-md shadow-md bg-gray-100 hover:bg-gray-300">
+                <h3>Interview</h3>
+                <p id="interview-job-count" class="font-bold text-2xl text-success my-1">0</p>
+            </div>
+            <div class="p-2 w-full text-neutral rounded-md shadow-md bg-gray-100 hover:bg-gray-300">
+                <h3>Rejected</h3>
+                <p id="rejected-job-count" class="font-bold text-2xl text-error my-1">0</p>
+            </div>
+        </div>
+    </header>
+    <section class="job-section w-9/12 mx-auto">
+        <div class="job-section-header my-4 flex justify-between items-center">
+            <h2 class="text-xl font-bold">Available Jobs</h2>
+            <p><span id="selected-info" class="hidden"><span id="selected-job-count">0</span> of</span><span
+                    class="available-job-count">8</span> jobs</p>
+        </div>
+        <div class="info-buttons flex justify-start gap-3">
+            <button class="btn btn-soft btn-primary px-4 py-2">all</button>
+            <button class="btn btn-soft btn-success px-4 py-2">Interview</button>
+            <button class="btn btn-soft btn-error px-4 py-2">Rejected</button>
+        </div>
+        <div id="job-container">
+            <!-- ===================== JOB CARD 1 ===================== -->
+            <div class="job-card border-l-4 border-primary p-8 rounded-md shadow-md my-5 transition duration-300 ease-in-out hover:scale-102">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="font-bold text-xl">TechNova Solutions Ltd.</h2>
+                        <h3 class="mb-3 text-neutral/60">Jr Software Engineer</h3>
+                    </div>
+                    <button class="btn btn-error rounded-full btn-soft hover:scale-95">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+                <p class="text-sm my-2 text-neutral/60">
+                    <span>Dhaka, Bangladesh</span> • <span>On-site</span> • <span>Full-time</span> • <span>$35,000 -
+                        $45,000</span>
+                </p>
+                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <p class="my-3 text-neutral/60">
+                    TechNova Solutions Ltd. is looking for a passionate and detail-oriented Junior Software Engineer
+                    (Frontend) to join our growing development team. Strong knowledge of HTML, CSS, JavaScript,
+                    and basic React.js required.
+                </p>
+                <button class="btn btn-outline btn-success">Interview</button>
+                <button class="btn btn-outline btn-error">Rejected</button>
+            </div>
+
+            <!-- ===================== JOB CARD 2 ===================== -->
+            <div class="job-card border-l-4 border-primary p-8 rounded-md shadow-md my-5 transition duration-300 ease-in-out hover:scale-102">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="font-bold text-xl">NextGen IT Solutions</h2>
+                        <h3 class="mb-3 text-neutral/60">Backend Developer</h3>
+                    </div>
+                    <button class="btn btn-error rounded-full btn-soft hover:scale-95">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+                <p class="text-sm my-2 text-neutral/60">
+                    <span>Chattogram, Bangladesh</span> • <span>Hybrid</span> • <span>Full-time</span> • <span>$40,000 -
+                        $55,000</span>
+                </p>
+                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <p class="my-3 text-neutral/60">
+                    Seeking a Backend Developer with strong Node.js, Express, and MongoDB skills.
+                    Experience building REST APIs and handling authentication systems preferred.
+                </p>
+                <button class="btn btn-outline btn-success">Interview</button>
+                <button class="btn btn-outline btn-error">Rejected</button>
+            </div>
+
+            <!-- ===================== JOB CARD 3 ===================== -->
+            <div class="job-card border-l-4 border-primary p-8 rounded-md shadow-md my-5 transition duration-300 ease-in-out hover:scale-102">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="font-bold text-xl">BrightStack Technologies</h2>
+                        <h3 class="mb-3 text-neutral/60">Full Stack Developer</h3>
+                    </div>
+                    <button class="btn btn-error rounded-full btn-soft hover:scale-95">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+                <p class="text-sm my-2 text-neutral/60">
+                    <span>Remote</span> • <span>Remote</span> • <span>Contract</span> • <span>$50,000 - $70,000</span>
+                </p>
+                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <p class="my-3 text-neutral/60">
+                    Hiring a Full Stack Developer proficient in React, Node.js, and MySQL.
+                    Experience integrating third-party APIs and scalable systems required.
+                </p>
+                <button class="btn btn-outline btn-success">Interview</button>
+                <button class="btn btn-outline btn-error">Rejected</button>
+            </div>
+
+            <!-- ===================== JOB CARD 4 ===================== -->
+            <div class="job-card border-l-4 border-primary p-8 rounded-md shadow-md my-5 transition duration-300 ease-in-out hover:scale-102">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="font-bold text-xl">CloudWave Systems</h2>
+                        <h3 class="mb-3 text-neutral/60">DevOps Engineer</h3>
+                    </div>
+                    <button class="btn btn-error rounded-full btn-soft hover:scale-95">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+                <p class="text-sm my-2 text-neutral/60">
+                    <span>Sylhet, Bangladesh</span> • <span>On-site</span> • <span>Full-time</span> • <span>$60,000 -
+                        $80,000</span>
+                </p>
+                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <p class="my-3 text-neutral/60">
+                    Looking for a DevOps Engineer experienced with Docker, Kubernetes, AWS,
+                    and CI/CD pipeline management.
+                </p>
+                <button class="btn btn-outline btn-success">Interview</button>
+                <button class="btn btn-outline btn-error">Rejected</button>
+            </div>
+
+            <!-- ===================== JOB CARD 5 ===================== -->
+            <div class="job-card border-l-4 border-primary p-8 rounded-md shadow-md my-5 transition duration-300 ease-in-out hover:scale-102">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="font-bold text-xl">DataSphere Analytics</h2>
+                        <h3 class="mb-3 text-neutral/60">Data Analyst</h3>
+                    </div>
+                    <button class="btn btn-error rounded-full btn-soft hover:scale-95">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+                <p class="text-sm my-2 text-neutral/60">
+                    <span>Dhaka, Bangladesh</span> • <span>Hybrid</span> • <span>Full-time</span> • <span>$30,000 -
+                        $45,000</span>
+                </p>
+                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <p class="my-3 text-neutral/60">
+                    Seeking a Data Analyst proficient in SQL, Excel, and Power BI.
+                    Responsible for dashboards, reporting, and data cleaning.
+                </p>
+                <button class="btn btn-outline btn-success">Interview</button>
+                <button class="btn btn-outline btn-error">Rejected</button>
+            </div>
+
+            <!-- ===================== JOB CARD 6 ===================== -->
+            <div class="job-card border-l-4 border-primary p-8 rounded-md shadow-md my-5 transition duration-300 ease-in-out hover:scale-102">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="font-bold text-xl">CyberGuard Security</h2>
+                        <h3 class="mb-3 text-neutral/60">Cyber Security Specialist</h3>
+                    </div>
+                    <button class="btn btn-error rounded-full btn-soft hover:scale-95">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+                <p class="text-sm my-2 text-neutral/60">
+                    <span>Rajshahi, Bangladesh</span> • <span>On-site</span> • <span>Full-time</span> • <span>$55,000 -
+                        $75,000</span>
+                </p>
+                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <p class="my-3 text-neutral/60">
+                    Hiring a Cyber Security Specialist experienced in penetration testing,
+                    vulnerability assessment, and network monitoring.
+                </p>
+                <button class="btn btn-outline btn-success">Interview</button>
+                <button class="btn btn-outline btn-error">Rejected</button>
+            </div>
+
+            <!-- ===================== JOB CARD 7 ===================== -->
+            <div class="job-card border-l-4 border-primary p-8 rounded-md shadow-md my-5 transition duration-300 ease-in-out hover:scale-102">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="font-bold text-xl">InnoSoft Labs</h2>
+                        <h3 class="mb-3 text-neutral/60">Mobile App Developer (Flutter)</h3>
+                    </div>
+                    <button class="btn btn-error rounded-full btn-soft hover:scale-95">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+                <p class="text-sm my-2 text-neutral/60">
+                    <span>Khulna, Bangladesh</span> • <span>Remote</span> • <span>Full-time</span> • <span>$45,000 -
+                        $60,000</span>
+                </p>
+                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <p class="my-3 text-neutral/60">
+                    Seeking a Flutter Developer with experience in Firebase,
+                    REST API integration, and state management.
+                </p>
+                <button class="btn btn-outline btn-success">Interview</button>
+                <button class="btn btn-outline btn-error">Rejected</button>
+            </div>
+
+            <!-- ===================== JOB CARD 8 ===================== -->
+            <div class="job-card border-l-4 border-primary p-8 rounded-md shadow-md my-5 transition duration-300 ease-in-out hover:scale-102">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="font-bold text-xl">AI Nexus Research Center</h2>
+                        <h3 class="mb-3 text-neutral/60">Machine Learning Engineer</h3>
+                    </div>
+                    <button class="btn btn-error rounded-full btn-soft hover:scale-95">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </div>
+                <p class="text-sm my-2 text-neutral/60">
+                    <span>Dhaka, Bangladesh</span> • <span>Hybrid</span> • <span>Full-time</span> • <span>$70,000 -
+                        $95,000</span>
+                </p>
+                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <p class="my-3 text-neutral/60">
+                    Looking for a Machine Learning Engineer skilled in Python,
+                    TensorFlow/PyTorch, and model deployment. NLP or CV experience preferred.
+                </p>
+                <button class="btn btn-outline btn-success">Interview</button>
+                <button class="btn btn-outline btn-error">Rejected</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
