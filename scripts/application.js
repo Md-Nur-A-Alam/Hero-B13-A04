@@ -8,15 +8,15 @@ document.getElementById("job-container")
         if (targetBtn.classList.contains("btn-secondary")) {
 
             const statusBtnText = targetCard.querySelector('.status-btn').innerText;
-            if(statusBtnText==="Interview") {
-                document.getElementById("interview-job-count").innerText=document.getElementById("interview-job-count").innerText-1;
+            if (statusBtnText === "Interview") {
+                document.getElementById("interview-job-count").innerText = document.getElementById("interview-job-count").innerText - 1;
                 selectInfoUpdate("interview-job-count");
             }
-            else if(statusBtnText==="Rejected"){
-                document.getElementById("rejected-job-count").innerText=document.getElementById("rejected-job-count").innerText-1;
+            else if (statusBtnText === "Rejected") {
+                document.getElementById("rejected-job-count").innerText = document.getElementById("rejected-job-count").innerText - 1;
                 selectInfoUpdate("rejected-job-count");
             }
-            
+
             targetCard.remove();
             const jobCards = document.querySelectorAll('#job-container .job-card');
             const availableJobs = document.getElementsByClassName('available-job-count');
@@ -52,8 +52,7 @@ document.getElementById("job-container")
             // const interviewDiv = document.getElementById("interview");
             // console.log(targetCard.innerHTML);
             // const newEl = document.createElement("div");
-            targetCard.classList.remove("border-primary");
-            targetCard.classList.remove("border-error");
+            targetCard.classList.remove("border-primary", "border-success", "border-error");
             targetCard.classList.add("border-success");
             // console.log(targetCard.className);
             // newEl.className=targetCard.className;
@@ -65,11 +64,10 @@ document.getElementById("job-container")
             valInc = getSelectJob(typeInc) + 1;
             viewportTyp = "btn-error";
 
-            const rejectedDiv = document.getElementById("rejected");
+            // const rejectedDiv = document.getElementById("rejected");
             // console.log(targetCard.innerHTML);
             // const newEl = document.createElement("div");
-            targetCard.classList.remove("border-primary");
-            targetCard.classList.remove("border-success");
+            targetCard.classList.remove("border-primary","border-success","border-error");
             targetCard.classList.add("border-error");
             // newEl.className=targetCard.className;
             // newEl.innerHTML=`${targetCard.innerHTML}`;
@@ -103,7 +101,7 @@ document.getElementById("job-container")
 
 // available jobs button toogleing
 document.getElementById("search-all").addEventListener("click", function () {
-    
+
     // document.getElementById("interview").classList.add("hidden");
     document.getElementById("selected-info").classList.add("hidden");
     selectBtnFocusUpdate("search-all");
@@ -117,7 +115,7 @@ document.getElementById("search-all").addEventListener("click", function () {
     }
 })
 document.getElementById("search-interview").addEventListener("click", function () {
-    
+
     // document.getElementById("job-container").classList.add("hidden");
     document.getElementById("selected-info").classList.remove("hidden");
     selectInfoUpdate("interview-job-count");
@@ -133,7 +131,7 @@ document.getElementById("search-interview").addEventListener("click", function (
     }
 })
 document.getElementById("search-reject").addEventListener("click", function () {
-    
+
     // document.getElementById("interview").classList.add("hidden");
     document.getElementById("selected-info").classList.remove("hidden");
     selectInfoUpdate("rejected-job-count");

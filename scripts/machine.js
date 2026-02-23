@@ -13,7 +13,7 @@ function print(obj) {
 
 // ============ view Port for no jobs ==============
 
-document.getElementById("body").addEventListener("click", function (event) {
+document.getElementById("job-body").addEventListener("click", function (event) {
     const focusButton = event.target.closest("button");
     if (!focusButton) return;
     const noJobs = document.getElementById("no-jobs");
@@ -22,18 +22,18 @@ document.getElementById("body").addEventListener("click", function (event) {
     const rejectedJobCount = Number(document.getElementById("rejected-job-count").innerText);
     const btn = document.querySelectorAll('#focus-btn button')
     
-    print("not returned "+totalJobCount);
+    // print("not returned "+totalJobCount);
     if (btn[0].classList.contains("active") && totalJobCount==0) {
-        print("1");
+        // print("1");
         noJobs.classList.remove("hidden");
     } else if (btn[1].classList.contains("active") && interviewJobCount==0) {
-        print("2");
+        // print("2");
         noJobs.classList.remove("hidden");
     } else if (btn[2].classList.contains("active") && rejectedJobCount==0) {
-        print("3");
+        // print("3");
         noJobs.classList.remove("hidden");
     } else {
-        print("0");
+        // print("0");
         noJobs.classList.add("hidden");
     }
 })
@@ -42,7 +42,7 @@ function viewport(type, job) {
     if (!type) {
         return;
     }
-    console.log("triggered and type is : ", type);
+    // console.log("triggered and type is : ", type);
     const elements = job.getElementsByTagName("button");
     if (!elements[1].classList.contains(type)) job.classList.add("hidden");
 }
