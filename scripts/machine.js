@@ -7,6 +7,10 @@ for(const job of availableJobs)
     job.innerText=jobCards.length;
 }
 
+
+
+// ============ get element by ID ==============
+
 // ============ get selected jobs ==============
 function getSelectJob(type){
     return Number(document.getElementById(type).innerText);
