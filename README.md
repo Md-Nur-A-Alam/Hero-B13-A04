@@ -1,3 +1,66 @@
+# 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+Answer:
+## getElementById():
+it select a single element by using the id and it's very fast and accurate to find any specific info or section of element;
+## getElementsByClassName():
+it selects all the elements by using the class name and it return the HTML collection;
+## querySelector() / querySelectorAll()
+both of them use css selector to find the elements but the difference is:
+- querySelector() select just the first elements;
+- querySelectorAll() return NodeList with collection of Element nodes;
+
+---
+# 2. How do you create and insert a new element into the DOM?
+Answer:
+- firstly create an element: const div = document.createElement("div")
+- secondly set the innerText or innerHTML: div.innerText = "demo text"
+- finally append with DOM: document.body.append(div)
+
+---
+# 3. What is Event Bubbling? And how does it work?
+Answer:
+in a DOM tree when the top-down approach follow, then called it event capturing and when the bottom-up approach follows, then called bulling. that means when an event happens on an element, it first runs on that elements and then moves upwards to it's parent, grand parent, grand grand parent etc untill reaches document or window.
+
+---
+# 4. What is Event Delegation in JavaScript? Why is it useful?
+Answer:
+instead of adding direct listener to the target element. it add the event listener to it's parent or grand parent, so that the event listener can be apply to all of it's child and grand child etc.
+
+---
+# 5. What is the difference between preventDefault() and stopPropagation() methods?
+Answer:
+## preventDefault():
+it prevent or stop the browser's default behavior and affects default action.
+
+## stopPropagation():
+it stops event from bubbling. it is very useful for specific situations and affects event flow (bubbling).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Welcome To ( সহজ সরল সিম্পল ) Assignment - 4 
 
 
