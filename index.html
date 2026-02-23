@@ -53,7 +53,7 @@
     <section class="job-section w-9/12 mx-auto">
         <div class="job-section-header my-4 flex justify-between items-center">
             <h2 class="text-xl font-bold">Available Jobs</h2>
-            <p><span id="selected-info" class="hidden"><span id="selected-job-count">0</span> of</span><span
+            <p><span id="selected-info" class="hidden"><span id="selected-job-count">0</span> of </span><span
                     class="available-job-count">8</span> jobs</p>
         </div>
         <div class="info-buttons flex justify-start gap-3">
@@ -61,7 +61,7 @@
             <button class="btn btn-soft btn-success px-4 py-2">Interview</button>
             <button class="btn btn-soft btn-error px-4 py-2">Rejected</button>
         </div>
-        <div id="job-container">
+        <div id="job-container" class="all">
             <!-- ===================== JOB CARD 1 ===================== -->
             <div class="job-card border-l-4 border-primary p-8 rounded-md shadow-md my-5 transition duration-300 ease-in-out hover:scale-102">
                 <div class="flex justify-between items-center">
@@ -77,14 +77,14 @@
                     <span>Dhaka, Bangladesh</span> • <span>On-site</span> • <span>Full-time</span> • <span>$35,000 -
                         $45,000</span>
                 </p>
-                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <button class="status-btn btn btn-primary btn-soft">Not Applied</button>
                 <p class="my-3 text-neutral/60">
                     TechNova Solutions Ltd. is looking for a passionate and detail-oriented Junior Software Engineer
                     (Frontend) to join our growing development team. Strong knowledge of HTML, CSS, JavaScript,
                     and basic React.js required.
                 </p>
-                <button class="btn btn-outline btn-success">Interview</button>
-                <button class="btn btn-outline btn-error">Rejected</button>
+                <button class="select-interview btn btn-outline btn-success">Interview</button>
+                <button class="select-reject btn btn-outline btn-error">Rejected</button>
             </div>
 
             <!-- ===================== JOB CARD 2 ===================== -->
@@ -102,13 +102,13 @@
                     <span>Chattogram, Bangladesh</span> • <span>Hybrid</span> • <span>Full-time</span> • <span>$40,000 -
                         $55,000</span>
                 </p>
-                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <button class="status-btn btn btn-primary btn-soft">Not Applied</button>
                 <p class="my-3 text-neutral/60">
                     Seeking a Backend Developer with strong Node.js, Express, and MongoDB skills.
                     Experience building REST APIs and handling authentication systems preferred.
                 </p>
-                <button class="btn btn-outline btn-success">Interview</button>
-                <button class="btn btn-outline btn-error">Rejected</button>
+                <button class="select-interview btn btn-outline btn-success">Interview</button>
+                <button class="select-reject btn btn-outline btn-error">Rejected</button>
             </div>
 
             <!-- ===================== JOB CARD 3 ===================== -->
@@ -125,13 +125,13 @@
                 <p class="text-sm my-2 text-neutral/60">
                     <span>Remote</span> • <span>Remote</span> • <span>Contract</span> • <span>$50,000 - $70,000</span>
                 </p>
-                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <button class="status-btn btn btn-primary btn-soft">Not Applied</button>
                 <p class="my-3 text-neutral/60">
                     Hiring a Full Stack Developer proficient in React, Node.js, and MySQL.
                     Experience integrating third-party APIs and scalable systems required.
                 </p>
-                <button class="btn btn-outline btn-success">Interview</button>
-                <button class="btn btn-outline btn-error">Rejected</button>
+                <button class="select-interview btn btn-outline btn-success">Interview</button>
+                <button class="select-reject btn btn-outline btn-error">Rejected</button>
             </div>
 
             <!-- ===================== JOB CARD 4 ===================== -->
@@ -149,13 +149,13 @@
                     <span>Sylhet, Bangladesh</span> • <span>On-site</span> • <span>Full-time</span> • <span>$60,000 -
                         $80,000</span>
                 </p>
-                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <button class="status-btn btn btn-primary btn-soft">Not Applied</button>
                 <p class="my-3 text-neutral/60">
                     Looking for a DevOps Engineer experienced with Docker, Kubernetes, AWS,
                     and CI/CD pipeline management.
                 </p>
-                <button class="btn btn-outline btn-success">Interview</button>
-                <button class="btn btn-outline btn-error">Rejected</button>
+                <button class="select-interview btn btn-outline btn-success">Interview</button>
+                <button class="select-reject btn btn-outline btn-error">Rejected</button>
             </div>
 
             <!-- ===================== JOB CARD 5 ===================== -->
@@ -173,13 +173,13 @@
                     <span>Dhaka, Bangladesh</span> • <span>Hybrid</span> • <span>Full-time</span> • <span>$30,000 -
                         $45,000</span>
                 </p>
-                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <button class="status-btn btn btn-primary btn-soft">Not Applied</button>
                 <p class="my-3 text-neutral/60">
                     Seeking a Data Analyst proficient in SQL, Excel, and Power BI.
                     Responsible for dashboards, reporting, and data cleaning.
                 </p>
-                <button class="btn btn-outline btn-success">Interview</button>
-                <button class="btn btn-outline btn-error">Rejected</button>
+                <button class="select-interview btn btn-outline btn-success">Interview</button>
+                <button class="select-reject btn btn-outline btn-error">Rejected</button>
             </div>
 
             <!-- ===================== JOB CARD 6 ===================== -->
@@ -202,8 +202,8 @@
                     Hiring a Cyber Security Specialist experienced in penetration testing,
                     vulnerability assessment, and network monitoring.
                 </p>
-                <button class="btn btn-outline btn-success">Interview</button>
-                <button class="btn btn-outline btn-error">Rejected</button>
+                <button class="status-btn select-interview btn btn-outline btn-success">Interview</button>
+                <button class="select-reject btn btn-outline btn-error">Rejected</button>
             </div>
 
             <!-- ===================== JOB CARD 7 ===================== -->
@@ -221,13 +221,13 @@
                     <span>Khulna, Bangladesh</span> • <span>Remote</span> • <span>Full-time</span> • <span>$45,000 -
                         $60,000</span>
                 </p>
-                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <button class="status-btn btn btn-primary btn-soft">Not Applied</button>
                 <p class="my-3 text-neutral/60">
                     Seeking a Flutter Developer with experience in Firebase,
                     REST API integration, and state management.
                 </p>
-                <button class="btn btn-outline btn-success">Interview</button>
-                <button class="btn btn-outline btn-error">Rejected</button>
+                <button class="select-interview btn btn-outline btn-success">Interview</button>
+                <button class="select-reject btn btn-outline btn-error">Rejected</button>
             </div>
 
             <!-- ===================== JOB CARD 8 ===================== -->
@@ -245,16 +245,21 @@
                     <span>Dhaka, Bangladesh</span> • <span>Hybrid</span> • <span>Full-time</span> • <span>$70,000 -
                         $95,000</span>
                 </p>
-                <button class="btn btn-primary btn-soft">Not Applied</button>
+                <button class="status-btn btn btn-primary btn-soft">Not Applied</button>
                 <p class="my-3 text-neutral/60">
                     Looking for a Machine Learning Engineer skilled in Python,
                     TensorFlow/PyTorch, and model deployment. NLP or CV experience preferred.
                 </p>
-                <button class="btn btn-outline btn-success">Interview</button>
-                <button class="btn btn-outline btn-error">Rejected</button>
+                <button class="select-interview btn btn-outline btn-success">Interview</button>
+                <button class="select-reject btn btn-outline btn-error">Rejected</button>
             </div>
         </div>
+
+        <div id="interview"></div>
+        <div id="rejected"></div>
     </section>
+    <script src="./scripts/machine.js"></script>
+    <script src="./scripts/application.js"></script>
 </body>
 
 </html>
