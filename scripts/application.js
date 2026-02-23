@@ -103,6 +103,7 @@ document.getElementById("job-container")
 
 // available jobs button toogleing
 document.getElementById("search-all").addEventListener("click", function () {
+    
     // document.getElementById("interview").classList.add("hidden");
     document.getElementById("selected-info").classList.add("hidden");
     selectBtnFocusUpdate("search-all");
@@ -116,6 +117,7 @@ document.getElementById("search-all").addEventListener("click", function () {
     }
 })
 document.getElementById("search-interview").addEventListener("click", function () {
+    
     // document.getElementById("job-container").classList.add("hidden");
     document.getElementById("selected-info").classList.remove("hidden");
     selectInfoUpdate("interview-job-count");
@@ -131,6 +133,7 @@ document.getElementById("search-interview").addEventListener("click", function (
     }
 })
 document.getElementById("search-reject").addEventListener("click", function () {
+    
     // document.getElementById("interview").classList.add("hidden");
     document.getElementById("selected-info").classList.remove("hidden");
     selectInfoUpdate("rejected-job-count");
