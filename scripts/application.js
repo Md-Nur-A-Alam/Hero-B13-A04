@@ -13,7 +13,7 @@ document.getElementById("job-container")
                 selectInfoUpdate("interview-job-count");
             }
             else if(statusBtnText==="Rejected"){
-                document.getElementById("rejected-job-count").innerText=getElementById("interview-job-count").innerText-1;
+                document.getElementById("rejected-job-count").innerText=document.getElementById("rejected-job-count").innerText-1;
                 selectInfoUpdate("rejected-job-count");
             }
             

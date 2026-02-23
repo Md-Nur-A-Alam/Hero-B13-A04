@@ -21,6 +21,8 @@ document.getElementById("body").addEventListener("click", function (event) {
     const interviewJobCount = Number(document.getElementById("interview-job-count").innerText);
     const rejectedJobCount = Number(document.getElementById("rejected-job-count").innerText);
     const btn = document.querySelectorAll('#focus-btn button')
+    
+    print("not returned "+totalJobCount);
     if (btn[0].classList.contains("active") && totalJobCount==0) {
         print("1");
         noJobs.classList.remove("hidden");
